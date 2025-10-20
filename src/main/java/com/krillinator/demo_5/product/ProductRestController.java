@@ -47,7 +47,7 @@ public class ProductRestController {
                 );
     }
 
-    @DeleteMapping("/delete")
+    @DeleteMapping("/delete/{id}")
     public Mono<Void> deleteProductById(@PathVariable @Positive Long id) {
 
         return productService.deleteProductById(id)
